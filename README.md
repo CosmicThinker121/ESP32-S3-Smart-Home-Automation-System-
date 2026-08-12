@@ -7,7 +7,7 @@ Final-year diploma project — Dar es Salaam Institute of Technology, Department
 **Author:** Frolian Fikiri
 **Contact:** fikirifrolian@gmail.com
 
-![System Architecture](images/fig3.1-system-architecture.png)
+![System Architecture](fig3.1-system-architecture.png)
 
 ---
 
@@ -46,7 +46,7 @@ This project builds a transparent, low-cost, locally serviceable alternative: a 
 | Inline Fuse Holder (1A) | Mains-side overcurrent protection |
 | 18W AC LED Bulbs (x4) | Simulated loads for bulb, fan, pump, fridge |
 
-Full 28-item bill of materials is in [`docs/bill-of-materials.md`](docs/bill-of-materials.md).
+Full 28-item bill of materials is in [`docs/bill-of-materials.md`](bill-of-materials.md).
 
 ## GPIO Assignment
 
@@ -83,7 +83,7 @@ Reserved pins (never used for peripherals): G35–G37 (Octal PSRAM), G0/G3/G45/G
 
 ## Firmware
 
-Full source: [`firmware/SmartHome_ESP32S3.ino`](firmware/SmartHome_ESP32S3.ino)
+Full source: [`firmware/SmartHome_ESP32S3.ino`](SmartHome_ESP32S3.ino)
 
 **Libraries required (Arduino IDE Library Manager):**
 - `Blynk` (BlynkSimpleEsp32)
@@ -118,17 +118,17 @@ Three non-trivial faults were found and resolved during bring-up — documented 
 | Unresponsive water pump relay | No click, no LED, on that channel only | Missing common ground between ESP32-S3 logic ground and the relay board's separate supply | Grounds tied together |
 | Blocking WiFi at boot | System hung indefinitely with no WiFi | `Blynk.begin()` blocks until connected | 30-second non-blocking timeout; system proceeds offline |
 
-Full test case table and photos of the diagnosis process are in [`docs/testing-and-troubleshooting.md`](docs/testing-and-troubleshooting.md).
+Full test case table and photos of the diagnosis process are in [`docs/testing-and-troubleshooting.md`](testing-and-troubleshooting.md).
 
 ## Gallery
 
 | | |
 |---|---|
-| ![Circuit schematic](images/fig3.2-circuit-schematic-wokwi.png) | ![Relay wiring](images/fig3.3-relay-module-wiring.png) |
+| ![Circuit schematic](fig3.2-circuit-schematic-wokwi.png) | ![Relay wiring](fig3.3-relay-module-wiring.png) |
 | Simulated circuit schematic (Wokwi) | 4-channel relay module wiring |
-| ![Interior wiring](images/fig3.4-interior-enclosure-wiring.png) | ![Enclosure front](images/fig3.5-assembled-enclosure-front-panel.png) |
+| ![Interior wiring](fig3.4-interior-enclosure-wiring.png) | ![Enclosure front](fig3.5-assembled-enclosure-front-panel.png) |
 | Interior enclosure wiring | Assembled enclosure, front panel |
-| ![LCD readout](images/fig5.1-lcd-live-readout.png) | ![Blynk dashboard](images/fig5.2-blynk-mobile-dashboard.png) |
+| ![LCD readout](fig5.1-lcd-live-readout.png) | ![Blynk dashboard](fig5.2-blynk-mobile-dashboard.png) |
 | Live 20x4 LCD readout during testing | Blynk mobile dashboard |
 
 ## Future Work
